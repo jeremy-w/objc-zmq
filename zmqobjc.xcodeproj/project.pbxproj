@@ -6,10 +6,30 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; };
+		3F62DF6711DED7A4008EA78B /* ZMQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF6511DED7A4008EA78B /* ZMQContext.m */; };
+		3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; };
+		3F62DF6911DED7A4008EA78B /* ZMQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF6511DED7A4008EA78B /* ZMQContext.m */; };
+		3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; };
+		3F62DF7D11DEDAAA008EA78B /* ZMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */; };
+		3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; };
+		3F62DF7F11DEDAAA008EA78B /* ZMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */; };
+		3F62E09E11DEFB28008EA78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E09D11DEFB28008EA78B /* Foundation.framework */; };
+		3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E0A111DEFB4B008EA78B /* libzmq.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3F62DEEC11DEC8CB008EA78B /* README.mkd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mkd; sourceTree = "<group>"; };
 		3F62DEED11DEC94A008EA78B /* project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = project.xcconfig; sourceTree = "<group>"; };
 		3F62DF4F11DED50C008EA78B /* libzmqobjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzmqobjc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F62DF6411DED7A4008EA78B /* ZMQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQContext.h; sourceTree = "<group>"; };
+		3F62DF6511DED7A4008EA78B /* ZMQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMQContext.m; sourceTree = "<group>"; };
+		3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQSocket.h; sourceTree = "<group>"; };
+		3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMQSocket.m; sourceTree = "<group>"; };
+		3F62E09011DEF8AC008EA78B /* dylib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = dylib.xcconfig; sourceTree = "<group>"; };
+		3F62E09D11DEFB28008EA78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F62E0A111DEFB4B008EA78B /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzmq.dylib; path = /usr/local/lib/libzmq.dylib; sourceTree = "<absolute>"; };
 		D2AAC0630554660B00DB518D /* libzmqobjc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzmqobjc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -25,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F62E09E11DEFB28008EA78B /* Foundation.framework in Frameworks */,
+				3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +58,10 @@
 			children = (
 				3F62DEEC11DEC8CB008EA78B /* README.mkd */,
 				3F62DEED11DEC94A008EA78B /* project.xcconfig */,
+				3F62E09011DEF8AC008EA78B /* dylib.xcconfig */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
+				3F62E0A711DF04D5008EA78B /* Linked Libraries */,
 			);
 			name = zmqobjc;
 			sourceTree = "<group>";
@@ -45,6 +69,10 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3F62DF6411DED7A4008EA78B /* ZMQContext.h */,
+				3F62DF6511DED7A4008EA78B /* ZMQContext.m */,
+				3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */,
+				3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */,
 			);
 			name = Source;
 			path = src;
@@ -59,6 +87,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3F62E0A711DF04D5008EA78B /* Linked Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3F62E0A111DEFB4B008EA78B /* libzmq.dylib */,
+				3F62E09D11DEFB28008EA78B /* Foundation.framework */,
+			);
+			name = "Linked Libraries";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -66,6 +103,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */,
+				3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +112,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */,
+				3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F62DF6911DED7A4008EA78B /* ZMQContext.m in Sources */,
+				3F62DF7F11DEDAAA008EA78B /* ZMQSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F62DF6711DED7A4008EA78B /* ZMQContext.m in Sources */,
+				3F62DF7D11DEDAAA008EA78B /* ZMQSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +196,7 @@
 /* Begin XCBuildConfiguration section */
 		1DEB914B08733D8E0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F62E09011DEF8AC008EA78B /* dylib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -166,6 +212,7 @@
 		};
 		1DEB914C08733D8E0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F62E09011DEF8AC008EA78B /* dylib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
