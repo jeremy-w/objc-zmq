@@ -1,14 +1,12 @@
 `objc-zmq`: An Objective-C binding to `libzmq`
-===========================================
+==============================================
 
-This is an orthodox binding to `libzmq`:
-it follows the guidelines
+This is an Objective-C version
+of the reference ZeroMQ
+[object-oriented C API][zmq-docs].
+It follows the guidelines
 laid out by the official
 ["Guidelines for ZeroMQ bindings"][binding-zmq].
-In short,
-this an Objective-C version
-of an
-[object-oriented C API][zmq-docs].
 
-[binding-zmq]: http://www.zeromq.org/guidelines:bindings (Guidelines for ZeroMQ Bindings)
 [zmq-docs]: http://api.zeromq.org/zmq.html (zmq(7) Manual Page)
+[binding-zmq]: http://www.zeromq.org/guidelines:bindings (Guidelines for ZeroMQ Bindings)
