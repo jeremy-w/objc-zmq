@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "ZMQSocket.h"  // ZMQSocketType
+#import <libkern/OSAtomic.h>
 
 @interface ZMQContext : NSObject {
 	void *context;
 	NSMutableArray *sockets;
+	OSSpinLock socketsLock;
 	BOOL terminated;
 }
 + (void)getZMQVersionMajor:(int *)major minor:(int *)minor patch:(int *)patch;

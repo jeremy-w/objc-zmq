@@ -10,3 +10,53 @@ laid out by the official
 
 [zmq-docs]: http://api.zeromq.org/zmq.html (zmq(7) Manual Page)
 [binding-zmq]: http://www.zeromq.org/guidelines:bindings (Guidelines for ZeroMQ Bindings)
+
+Documentation
+-------------
+Refer to the [ZeroMQ manual pages][zmq-docs].
+The Objective-C binding
+maintains a bit more state
+than the C API exposes,
+in that you can query
+a `ZMQContext`
+for its sockets
+and query a `ZMQSocket`
+for its context.
+
+Thread Safety
+-------------
+ZeroMQ has some restrictive thread safety and coupling issues:
+
+* Sockets can only be used from the thread that created them.
+* All ZMQ sockets provided in a single call to `zmq_poll()` must have been created using the same context.
+
+Because sockets
+are coupled to contexts
+for polling,
+you have to track
+each socket's context
+and make sure not to mix them.
+(The `ZMQSocket` class tracks this for you.)
+
+Because each socket
+is bound to the thread that created it,
+you must be very careful when using
+ZeroMQ sockets
+with Grand Central Dispatch
+or `NSOperationQueue`.
+The only persistent thread
+that these two expose
+is the thread
+you're least likely
+to want to perform socket operations on:
+the main thread.
+
+To Do
+-----
+* Add functional tests in the form of sample code.
+* Provide a more (Core)Foundation-like API
+(CFSocket, CFFileDescriptor)
+that takes advantage of the runloop.
+This is complicated by
+the threading constraints
+present in libzmq-2.0.7.

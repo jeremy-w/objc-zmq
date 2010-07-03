@@ -27,6 +27,7 @@
 		return nil;
 	}
 
+	socketsLock = OS_SPINLOCK_INIT;
 	sockets = [[NSMutableArray alloc] init];
 	return self;
 }
@@ -44,7 +45,9 @@
 	ZMQSocket *
 	socket = [[[ZMQSocket alloc] initWithContext:self type:type] autorelease];
 	if (socket) {
-		[(NSMutableArray *)self.sockets addObject:socket];
+		OSSpinLockLock(&socketsLock); {
+			[(NSMutableArray *)self.sockets addObject:socket];
+		} OSSpinLockUnlock(&socketsLock);
 	}
 	return socket;
 }
