@@ -9,7 +9,7 @@ laid out by the official
 ["Guidelines for ZeroMQ bindings"][binding-zmq].
 
 [zmq-docs]: http://api.zeromq.org/zmq.html (zmq(7) Manual Page)
-[binding-zmq]: http://www.zeromq.org/guidelines:bindings (Guidelines for ZeroMQ Bindings)
+[binding-zmq]: http://www.zeromq.org/docs:bindings (Guidelines for ZeroMQ Bindings)
 
 Documentation
 -------------
