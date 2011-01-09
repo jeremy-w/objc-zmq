@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; };
+		3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F62DF6711DED7A4008EA78B /* ZMQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF6511DED7A4008EA78B /* ZMQContext.m */; };
-		3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; };
+		3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF6411DED7A4008EA78B /* ZMQContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F62DF6911DED7A4008EA78B /* ZMQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF6511DED7A4008EA78B /* ZMQContext.m */; };
-		3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; };
+		3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F62DF7D11DEDAAA008EA78B /* ZMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */; };
-		3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; };
+		3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F62DF7F11DEDAAA008EA78B /* ZMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */; };
 		3F62E09E11DEFB28008EA78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E09D11DEFB28008EA78B /* Foundation.framework */; };
 		3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E0A111DEFB4B008EA78B /* libzmq.dylib */; };
