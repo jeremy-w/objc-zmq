@@ -51,6 +51,18 @@ you're least likely
 to want to perform socket operations on:
 the main thread.
 
+Starting with
+ZeroMQ 2.1.0,
+you can use a socket
+from any thread
+provided you issue
+a full memory barrier
+between usage on one thread
+and on the other.
+The easiest way is to use
+`OSMemoryBarrier()`
+from `<libkern/OSAtomic.h>`.
+
 To Do
 -----
 * Add functional tests in the form of sample code.
