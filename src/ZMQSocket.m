@@ -48,12 +48,15 @@ static inline void ZMQLogError(id object, NSString *msg);
 @synthesize socket;
 @synthesize closed;
 - (void)close {
-	int err = zmq_close(self.socket);
-	if (err) {
-		ZMQLogError(self, @"zmq_close");
-		return;
+	// FIXME: This is not thread-safe.
+	if (!self.closed) {
+		int err = zmq_close(self.socket);
+		if (err) {
+			ZMQLogError(self, @"zmq_close");
+			return;
+		}
+		self.closed = YES;
 	}
-	self.closed = YES;
 }
 
 - (void)dealloc {
