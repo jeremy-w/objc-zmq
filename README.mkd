@@ -55,7 +55,7 @@ To Do
 -----
 * Add functional tests in the form of sample code.
 * Provide a more (Core)Foundation-like API
-(CFSocket, CFFileDescriptor)
+(`CFSocket`, `CFFileDescriptor`)
 that takes advantage of the runloop.
 This is complicated by
 the threading constraints
