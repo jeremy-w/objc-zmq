@@ -52,6 +52,12 @@
 	return socket;
 }
 
+- (void)closeSockets {
+	for (ZMQSocket *socket in self.sockets) {
+		[socket close];
+	}
+}
+
 @synthesize terminated;
 - (void)terminate {
 	(void)zmq_term(self.context);

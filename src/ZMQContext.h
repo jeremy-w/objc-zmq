@@ -17,6 +17,9 @@
 // Sockets associated with this context.
 @property(readonly, retain, NS_NONATOMIC_IPHONEONLY) NSArray *sockets;
 
+// Closes all associated sockets.
+- (void)closeSockets;
+
 // Initiates termination. All associated sockets will be shut down.
 - (void)terminate;
 
