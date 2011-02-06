@@ -10,6 +10,7 @@ typedef int ZMQMessageReceiveFlags;
 @interface ZMQSocket : NSObject {
 	void *socket;
 	ZMQContext *context;  // not retained
+	NSString *endpoint;
 	ZMQSocketType type;
 	BOOL closed;
 }
@@ -20,6 +21,7 @@ typedef int ZMQMessageReceiveFlags;
 - (void)close;
 // KVOable.
 @property(readonly, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
+@property(readonly, copy, NS_NONATOMIC_IPHONEONLY) NSString *endpoint;
 
 #pragma mark Socket Options
 - (BOOL)setData:(NSData *)data forOption:(ZMQSocketOption)option;

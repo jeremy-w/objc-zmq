@@ -12,6 +12,7 @@ enum {
 @interface ZMQSocket ()
 @property(readwrite, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
 @property(readonly) void *socket;
+@property(readwrite, copy, NS_NONATOMIC_IPHONEONLY) NSString *endpoint;
 @end
 
 static inline void ZMQLogError(id object, NSString *msg);
@@ -48,7 +49,6 @@ static inline void ZMQLogError(id object, NSString *msg);
 @synthesize socket;
 @synthesize closed;
 - (void)close {
-	// FIXME: This is not thread-safe.
 	if (!self.closed) {
 		int err = zmq_close(self.socket);
 		if (err) {
@@ -61,6 +61,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 
 - (void)dealloc {
 	[self close];
+	[endpoint release], endpoint = nil;
 	[super dealloc];
 }
 
@@ -101,8 +102,10 @@ static inline void ZMQLogError(id object, NSString *msg);
 }
 
 #pragma mark Endpoint Configuration
-- (BOOL)bindToEndpoint:(NSString *)endpoint {
-	const char *addr = [endpoint UTF8String];
+@synthesize endpoint;
+- (BOOL)bindToEndpoint:(NSString *)endpoint_ {
+	[self setEndpoint:endpoint_];
+	const char *addr = [endpoint_ UTF8String];
 	int err = zmq_bind(self.socket, addr);
 	if (err) {
 		ZMQLogError(self, @"zmq_bind");
@@ -111,8 +114,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	return YES;
 }
 
-- (BOOL)connectToEndpoint:(NSString *)endpoint {
-	const char *addr = [endpoint UTF8String];
+- (BOOL)connectToEndpoint:(NSString *)endpoint_ {
+	[self setEndpoint:endpoint_];
+	const char *addr = [endpoint_ UTF8String];
 	int err = zmq_connect(self.socket, addr);
 	if (err) {
 		ZMQLogError(self, @"zmq_connect");
