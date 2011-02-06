@@ -18,6 +18,21 @@ enum {
 static inline void ZMQLogError(id object, NSString *msg);
 
 @implementation ZMQSocket
++ (NSString *)nameForSocketType:(ZMQSocketType)type {
+	static NSString *const typeNames[] = {
+		@"ZMQ_PAIR",
+		@"ZMQ_PUB", @"ZMQ_SUB",
+		@"ZMQ_REQ", @"ZMQ_REP",
+		@"ZMQ_XREQ", @"ZMQ_XREP",
+		@"ZMQ_PULL", @"ZMQ_PUSH"
+	};
+	static const ZMQSocketType
+			typeNameCount = sizeof(typeNames)/sizeof(*typeNames);
+
+	if (type < 0 || type >= typeNameCount) return @"UNKNOWN";
+	return typeNames[type];
+}
+
 - (id)init {
 	self = [super init];
 	if (self) [self release];
@@ -68,9 +83,12 @@ static inline void ZMQLogError(id object, NSString *msg);
 @synthesize context;
 @synthesize type;
 - (NSString *)description {
+	NSString *typeName = [[self class] nameForSocketType:self.type];
 	NSString *
-	desc = [NSString stringWithFormat:@"<%@: %p (ctx=%p, type=%d, closed=%d)>",
-	        [self class], self, self.context, (int)self.type, (int)self.closed];
+	desc = [NSString stringWithFormat:
+			@"<%@: %p (ctx=%p, type=%@, endpoint=%@, closed=%d)>",
+			[self class], self, self.context, typeName, self.endpoint,
+			(int)self.closed];
 	return desc;
 }
 

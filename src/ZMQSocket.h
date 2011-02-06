@@ -14,6 +14,9 @@ typedef int ZMQMessageReceiveFlags;
 	ZMQSocketType type;
 	BOOL closed;
 }
+// Returns @"ZMQ_PUB" for ZMQ_PUB, for example.
++ (NSString *)nameForSocketType:(ZMQSocketType)type;
+
 // Create a socket using -[ZMQContext socketWithType:].
 @property(readonly, assign, NS_NONATOMIC_IPHONEONLY) ZMQContext *context;
 @property(readonly, NS_NONATOMIC_IPHONEONLY) ZMQSocketType type;
