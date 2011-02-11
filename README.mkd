@@ -25,7 +25,7 @@ for its context.
 
 Thread Safety
 -------------
-ZeroMQ has some restrictive thread safety and coupling issues:
+Early versions of ZeroMQ had some restrictive thread safety and coupling issues:
 
 * Sockets can only be used from the thread that created them.
 * All ZMQ sockets provided in a single call to `zmq_poll()` must have been created using the same context.
@@ -37,38 +37,34 @@ you have to track
 each socket's context
 and make sure not to mix them.
 (The `ZMQSocket` class tracks this for you.)
+This is not as restrictive as it sounds,
+because most applications will only ever use
+a single context.
 
-Because each socket
-is bound to the thread that created it,
-you must be very careful when using
+Prior to  version 2.1.0,
+each socket was permanently bound to the thread that created it.
+This made it very difficult to use
 ZeroMQ sockets
 with Grand Central Dispatch
-or `NSOperationQueue`.
-The only persistent thread
-that these two expose
+or `NSOperationQueue`, because
+the only persistent thread
+that these two APIs expose
 is the thread
 you're least likely
 to want to perform socket operations on:
 the main thread.
 
-Starting with
-ZeroMQ 2.1.0,
-you can use a socket
-from any thread
-provided you issue
-a full memory barrier
-between usage on one thread
-and on the other.
-The easiest way is to use
-`OSMemoryBarrier()`
-from `<libkern/OSAtomic.h>`.
+Starting with version 2.1.0,
+a socket can be used from different threads
+provided a full memory barrier,
+such as that introduced by
+`<libkern/OSAtomic.h>`'s
+`OSMemoryBarrier` function,
+separates the socket's use on one thread
+from its use on another.
 
 To Do
 -----
 * Add functional tests in the form of sample code.
-* Provide a more (Core)Foundation-like API
-(`CFSocket`, `CFFileDescriptor`)
-that takes advantage of the runloop.
-This is complicated by
-the threading constraints
-present in libzmq-2.0.7.
+* Tie polling into the runloop, similar to
+`NSStream`, `CFSocket`, or `CFFileDescriptor`.

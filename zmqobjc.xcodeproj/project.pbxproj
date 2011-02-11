@@ -17,6 +17,8 @@
 		3F62DF7F11DEDAAA008EA78B /* ZMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */; };
 		3F62E09E11DEFB28008EA78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E09D11DEFB28008EA78B /* Foundation.framework */; };
 		3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E0A111DEFB4B008EA78B /* libzmq.dylib */; };
+		3FFFDB8012F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
+		3FFFDB8112F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		3F62E09011DEF8AC008EA78B /* dylib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = dylib.xcconfig; sourceTree = "<group>"; };
 		3F62E09D11DEFB28008EA78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F62E0A111DEFB4B008EA78B /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzmq.dylib; path = /usr/local/lib/libzmq.dylib; sourceTree = "<absolute>"; };
+		3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQObjC.h; sourceTree = "<group>"; };
 		D2AAC0630554660B00DB518D /* libzmqobjc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzmqobjc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +72,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */,
 				3F62DF6411DED7A4008EA78B /* ZMQContext.h */,
 				3F62DF6511DED7A4008EA78B /* ZMQContext.m */,
 				3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */,
@@ -105,6 +109,7 @@
 			files = (
 				3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */,
 				3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
+				3FFFDB8012F121D200E2D54F /* ZMQObjC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +119,7 @@
 			files = (
 				3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */,
 				3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
+				3FFFDB8112F121D200E2D54F /* ZMQObjC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

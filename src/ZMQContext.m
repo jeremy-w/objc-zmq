@@ -15,6 +15,13 @@
 	(void)zmq_version(major, minor, patch);
 }
 
+#pragma mark Polling
++ (int)pollWithItems:(zmq_pollitem_t *)ioItems count:(int)itemCount
+		timeoutAfterUsec:(long)usec {
+	int ret = zmq_poll(ioItems, itemCount, usec);
+	return ret;
+}
+
 - (id)initWithIOThreads:(NSUInteger)threadCount {
 	self = [super init];
 	if (!self) return nil;
@@ -50,6 +57,12 @@
 		} OSSpinLockUnlock(&socketsLock);
 	}
 	return socket;
+}
+
+- (void)closeSockets {
+	for (ZMQSocket *socket in self.sockets) {
+		[socket close];
+	}
 }
 
 @synthesize terminated;
