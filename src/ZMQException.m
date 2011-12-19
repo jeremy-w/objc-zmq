@@ -1,11 +1,3 @@
-//
-//  ZMQException.m
-//  zmqobjc
-//
-//  Created by Massimo Gengarelli on 12/19/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "ZMQException.h"
 
 @implementation ZMQException
