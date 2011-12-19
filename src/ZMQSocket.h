@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <zmq.h>
+
+#import "ZMQException.h"
+
 @class ZMQContext;
 
 typedef int ZMQSocketType;

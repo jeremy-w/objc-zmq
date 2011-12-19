@@ -31,7 +31,9 @@
 		NSLog(@"%s: *** Error creating ZMQContext: zmq_init: %s",
 		      __func__, zmq_strerror(zmq_errno()));
 		[self release];
-		return nil;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
 	socketsLock = OS_SPINLOCK_INIT;

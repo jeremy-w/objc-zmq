@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "ZMQSocket.h"  // ZMQSocketType
+#import "ZMQException.h"
 #import <libkern/OSAtomic.h>
 
 /* Special polling timeout values. */
