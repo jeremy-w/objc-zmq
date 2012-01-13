@@ -11,7 +11,7 @@ enum {
 
 @interface ZMQSocket ()
 @property(readwrite, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
-@property(readonly) void *socket;
+
 @property(readwrite, copy, NS_NONATOMIC_IPHONEONLY) NSString *endpoint;
 @end
 
@@ -165,10 +165,10 @@ static inline void ZMQLogError(id object, NSString *msg);
 
 	[messageData getBytes:zmq_msg_data(&msg) length:zmq_msg_size(&msg)];
 
-	err = zmq_send(self.socket, &msg, flags);
-	BOOL didSendData = (0 == err);
+	err = zmq_sendmsg(self.socket, &msg, flags);
+	BOOL didSendData = (-1 == err);
 	if (!didSendData) {
-		ZMQLogError(self, @"zmq_send");
+		ZMQLogError(self, @"zmq_sendmsg");
 		/* fall through */
 	}
 
@@ -190,9 +190,9 @@ static inline void ZMQLogError(id object, NSString *msg);
                                              code:zmq_errno()];
 	}
 
-	err = zmq_recv(self.socket, &msg, flags);
-	if (err) {
-		ZMQLogError(self, @"zmq_recv");
+	err = zmq_recvmsg(self.socket, &msg, flags);
+	if (err==-1) {
+		ZMQLogError(self, @"zmq_recvmsg");
 		err = zmq_msg_close(&msg);
 		if (err) {
 			ZMQLogError(self, @"zmq_msg_close");			
