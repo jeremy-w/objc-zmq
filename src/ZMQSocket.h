@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <zmq.h>
+
+#import "ZMQException.h"
+
 @class ZMQContext;
 
 typedef int ZMQSocketType;
@@ -20,6 +23,8 @@ typedef int ZMQMessageReceiveFlags;
 // Create a socket using -[ZMQContext socketWithType:].
 @property(readonly, assign, NS_NONATOMIC_IPHONEONLY) ZMQContext *context;
 @property(readonly, NS_NONATOMIC_IPHONEONLY) ZMQSocketType type;
+
+@property(readonly) void *socket;
 
 - (void)close;
 // KVOable.

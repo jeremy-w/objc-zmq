@@ -11,7 +11,7 @@ enum {
 
 @interface ZMQSocket ()
 @property(readwrite, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
-@property(readonly) void *socket;
+
 @property(readwrite, copy, NS_NONATOMIC_IPHONEONLY) NSString *endpoint;
 @end
 
@@ -36,12 +36,10 @@ static inline void ZMQLogError(id object, NSString *msg);
 - (id)init {
 	self = [super init];
 	if (self) [self release];
-	NSString *
-	err = [NSString stringWithFormat:
-	       @"%s: *** Create sockets using -[ZMQContext socketWithType:].",
-	       __func__];
-	NSLog(@"%@", err);
-	@throw err;
+	@throw [[ZMQException alloc] 
+            initWithCode:[NSString 
+                          stringWithFormat:@"%s: *** Create sockets using -[ZMQContext socketWithType:].", __func__]
+                    code:0];
 	return nil;
 }
 
@@ -53,7 +51,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	if (!socket) {
 		ZMQLogError(self, @"zmq_socket");
 		[self release];
-		return nil;
+        @throw [[ZMQException alloc]
+                initWithCode:[[NSString alloc] initWithUTF8String:zmq_strerror(zmq_errno())] 
+                        code:zmq_errno()];
 	}
 
 	context = context_;
@@ -67,8 +67,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	if (!self.closed) {
 		int err = zmq_close(self.socket);
 		if (err) {
-			ZMQLogError(self, @"zmq_close");
-			return;
+   			ZMQLogError(self, @"zmq_close");
+            @throw [[ZMQException alloc] initWithCode:[[NSString alloc] initWithUTF8String:zmq_strerror(zmq_errno())]
+                                                 code:zmq_errno()];
 		}
 		self.closed = YES;
 	}
@@ -97,7 +98,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	int err = zmq_setsockopt(self.socket, option, [data bytes], [data length]);
 	if (err) {
 		ZMQLogError(self, @"zmq_setsockopt");
-		return NO;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                                code:zmq_errno()];
 	}
 	return YES;
 }
@@ -111,7 +114,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	if (err) {
 		ZMQLogError(self, @"zmq_getsockopt");
 		free(storage);
-		return nil;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
 	NSData *
@@ -127,7 +132,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	int err = zmq_bind(self.socket, addr);
 	if (err) {
 		ZMQLogError(self, @"zmq_bind");
-		return NO;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 	return YES;
 }
@@ -138,7 +145,9 @@ static inline void ZMQLogError(id object, NSString *msg);
 	int err = zmq_connect(self.socket, addr);
 	if (err) {
 		ZMQLogError(self, @"zmq_connect");
-		return NO;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 	return YES;	
 }
@@ -149,15 +158,17 @@ static inline void ZMQLogError(id object, NSString *msg);
 	int err = zmq_msg_init_size(&msg, [messageData length]);
 	if (err) {
 		ZMQLogError(self, @"zmq_msg_init_size");
-		return NO;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
 	[messageData getBytes:zmq_msg_data(&msg) length:zmq_msg_size(&msg)];
 
-	err = zmq_send(self.socket, &msg, flags);
-	BOOL didSendData = (0 == err);
+	err = zmq_sendmsg(self.socket, &msg, flags);
+	BOOL didSendData = (-1 == err);
 	if (!didSendData) {
-		ZMQLogError(self, @"zmq_send");
+		ZMQLogError(self, @"zmq_sendmsg");
 		/* fall through */
 	}
 
@@ -174,17 +185,21 @@ static inline void ZMQLogError(id object, NSString *msg);
 	int err = zmq_msg_init(&msg);
 	if (err) {
 		ZMQLogError(self, @"zmq_msg_init");
-		return nil;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
-	err = zmq_recv(self.socket, &msg, flags);
-	if (err) {
-		ZMQLogError(self, @"zmq_recv");
+	err = zmq_recvmsg(self.socket, &msg, flags);
+	if (err==-1) {
+		ZMQLogError(self, @"zmq_recvmsg");
 		err = zmq_msg_close(&msg);
 		if (err) {
 			ZMQLogError(self, @"zmq_msg_close");			
 		}
-		return nil;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc] 
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
 	size_t length = zmq_msg_size(&msg);
