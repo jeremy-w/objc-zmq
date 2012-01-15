@@ -24,6 +24,8 @@ typedef int ZMQMessageReceiveFlags;
 @property(readonly, assign, NS_NONATOMIC_IPHONEONLY) ZMQContext *context;
 @property(readonly, NS_NONATOMIC_IPHONEONLY) ZMQSocketType type;
 
+@property(readonly) void *socket;
+
 - (void)close;
 // KVOable.
 @property(readonly, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
