@@ -154,7 +154,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 
 	[messageData getBytes:zmq_msg_data(&msg) length:zmq_msg_size(&msg)];
 
-	err = zmq_send(self.socket, &msg, flags);
+	err = zmq_sendmsg(self.socket, &msg, flags);
 	BOOL didSendData = (0 == err);
 	if (!didSendData) {
 		ZMQLogError(self, @"zmq_send");
@@ -177,7 +177,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 		return nil;
 	}
 
-	err = zmq_recv(self.socket, &msg, flags);
+	err = zmq_recvmsg(self.socket, &msg, flags);
 	if (err) {
 		ZMQLogError(self, @"zmq_recv");
 		err = zmq_msg_close(&msg);
