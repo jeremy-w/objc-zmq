@@ -22,4 +22,4 @@ OTHER_CPLUSPLUSFLAGS = $(SHARED_C_CPP_FLAGS) -Wabi -Wctor-dtor-privacy -Wstrict-
 
 ZERO_LINK = NO
 PREBINDING = NO
-HEADER_SEARCH_PATHS = /usr/local/include /opt/local/include
+HEADER_SEARCH_PATHS = ~/include /usr/local/include /opt/local/include
