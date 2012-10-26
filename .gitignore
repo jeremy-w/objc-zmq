@@ -11,6 +11,8 @@
 *.perspective
 *.perspectivev3
 *.pbxuser
+*.xcworkspace
+xcuserdata
 
 # Generated files
 build/
