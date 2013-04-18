@@ -198,6 +198,18 @@ static inline void ZMQLogError(id object, NSString *msg);
 	return data;
 }
 
+#pragma mark Subscribe
+- (BOOL)subscribeAll {
+	return [self subscribe:nil];
+}
+
+- (BOOL)subscribe:(NSString *)prefix {
+	size_t count = [prefix length];
+	int err = zmq_setsockopt(socket, ZMQ_SUBSCRIBE, [prefix UTF8String], count);
+	if (err == -1) return NO;
+	return YES;
+}
+
 #pragma mark Polling
 - (void)getPollItem:(zmq_pollitem_t *)outItem forEvents:(short)events {
 	NSParameterAssert(NULL != outItem);

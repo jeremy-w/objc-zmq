@@ -38,6 +38,10 @@ typedef int ZMQMessageReceiveFlags;
 - (BOOL)sendData:(NSData *)messageData withFlags:(ZMQMessageSendFlags)flags;
 - (NSData *)receiveDataWithFlags:(ZMQMessageReceiveFlags)flags;
 
+#pragma mark Subscribe
+- (BOOL)subscribeAll;
+- (BOOL)subscribe:(NSString *)prefix;
+
 #pragma mark Polling
 - (void)getPollItem:(zmq_pollitem_t *)outItem forEvents:(short)events;
 @end
