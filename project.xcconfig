@@ -1,5 +1,5 @@
 // Project-level build settings - all configurations
-SDKROOT = macosx10.6
+SDKROOT = macosx
 MACOSX_DEPLOYMENT_TARGET = 10.5
 
 ARCHS = i386 x86_64 ppc
