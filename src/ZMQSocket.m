@@ -10,9 +10,13 @@ enum {
 @end
 
 @interface ZMQSocket ()
-@property(readwrite, getter=isClosed, NS_NONATOMIC_IPHONEONLY) BOOL closed;
 
-@property(readwrite, copy, NS_NONATOMIC_IPHONEONLY) NSString *endpoint;
+@property(readwrite, getter=isClosed, atomic) BOOL closed;
+@property(atomic, weak) ZMQContext *context;
+@property(atomic, assign) ZMQSocketType type;
+@property(atomic, assign) void *socket;
+
+@property(readwrite, copy, atomic) NSString *endpoint;
 @end
 
 static inline void ZMQLogError(id object, NSString *msg);
@@ -33,36 +37,23 @@ static inline void ZMQLogError(id object, NSString *msg);
 	return typeNames[type];
 }
 
-- (id)init {
-	self = [super init];
-	if (self) [self release];
-	@throw [[ZMQException alloc] 
-            initWithCode:[NSString 
-                          stringWithFormat:@"%s: *** Create sockets using -[ZMQContext socketWithType:].", __func__]
-                    code:0];
-	return nil;
-}
-
 - (id)initWithContext:(ZMQContext *)context_ type:(ZMQSocketType)type_ {
 	self = [super init];
 	if (!self) return nil;
 
-	socket = zmq_socket(context_.context, type_);
-	if (!socket) {
+	self.socket = zmq_socket(context_.context, type_);
+	if (!self.socket) {
 		ZMQLogError(self, @"zmq_socket");
-		[self release];
         @throw [[ZMQException alloc]
                 initWithCode:[[NSString alloc] initWithUTF8String:zmq_strerror(zmq_errno())] 
                         code:zmq_errno()];
 	}
 
-	context = context_;
-	type = type_;
+	self.context = context_;
+	self.type = type_;
 	return self;
 }
 
-@synthesize socket;
-@synthesize closed;
 - (void)close {
 	if (!self.closed) {
 		int err = zmq_close(self.socket);
@@ -77,12 +68,8 @@ static inline void ZMQLogError(id object, NSString *msg);
 
 - (void)dealloc {
 	[self close];
-	[endpoint release], endpoint = nil;
-	[super dealloc];
 }
 
-@synthesize context;
-@synthesize type;
 - (NSString *)description {
 	NSString *typeName = [[self class] nameForSocketType:self.type];
 	NSString *
@@ -125,9 +112,8 @@ static inline void ZMQLogError(id object, NSString *msg);
 }
 
 #pragma mark Endpoint Configuration
-@synthesize endpoint;
 - (BOOL)bindToEndpoint:(NSString *)endpoint_ {
-	[self setEndpoint:endpoint_];
+	self.endpoint = endpoint_;
 	const char *addr = [endpoint_ UTF8String];
 	int err = zmq_bind(self.socket, addr);
 	if (err) {
@@ -140,7 +126,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 }
 
 - (BOOL)connectToEndpoint:(NSString *)endpoint_ {
-	[self setEndpoint:endpoint_];
+	self.endpoint = endpoint_;
 	const char *addr = [endpoint_ UTF8String];
 	int err = zmq_connect(self.socket, addr);
 	if (err) {
@@ -220,7 +206,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 
 - (BOOL)subscribe:(NSString *)prefix {
 	size_t count = [prefix length];
-	int err = zmq_setsockopt(socket, ZMQ_SUBSCRIBE, [prefix UTF8String], count);
+	int err = zmq_setsockopt(self.socket, ZMQ_SUBSCRIBE, [prefix UTF8String], count);
 	if (err == -1) return NO;
 	return YES;
 }

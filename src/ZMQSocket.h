@@ -10,21 +10,18 @@ typedef int ZMQSocketOption;
 typedef int ZMQMessageSendFlags;
 typedef int ZMQMessageReceiveFlags;
 
-@interface ZMQSocket : NSObject {
-	void *socket;
-	ZMQContext *context;  // not retained
-	NSString *endpoint;
-	ZMQSocketType type;
-	BOOL closed;
-}
+@interface ZMQSocket : NSObject
+
 // Returns @"ZMQ_PUB" for ZMQ_PUB, for example.
 + (NSString *)nameForSocketType:(ZMQSocketType)type;
 
 // Create a socket using -[ZMQContext socketWithType:].
-@property(readonly, assign, NS_NONATOMIC_IPHONEONLY) ZMQContext *context;
-@property(readonly, NS_NONATOMIC_IPHONEONLY) ZMQSocketType type;
+@property(atomic, readonly, weak) ZMQContext *context;
+@property(atomic, readonly, assign) ZMQSocketType type;
 
 @property(readonly) void *socket;
+
+- (id)init __attribute__((unavailable("use -[ZMQContext socketWithType:]")));
 
 - (void)close;
 // KVOable.
