@@ -166,7 +166,7 @@ static inline void ZMQLogError(id object, NSString *msg);
 	[messageData getBytes:zmq_msg_data(&msg) length:zmq_msg_size(&msg)];
 
 	err = zmq_sendmsg(self.socket, &msg, flags);
-	BOOL didSendData = (-1 == err);
+	BOOL didSendData = (-1 != err);
 	if (!didSendData) {
 		ZMQLogError(self, @"zmq_sendmsg");
 		/* fall through */
@@ -211,6 +211,18 @@ static inline void ZMQLogError(id object, NSString *msg);
 		/* fall through */
 	}
 	return data;
+}
+
+#pragma mark Subscribe
+- (BOOL)subscribeAll {
+	return [self subscribe:nil];
+}
+
+- (BOOL)subscribe:(NSString *)prefix {
+	size_t count = [prefix length];
+	int err = zmq_setsockopt(socket, ZMQ_SUBSCRIBE, [prefix UTF8String], count);
+	if (err == -1) return NO;
+	return YES;
 }
 
 #pragma mark Polling
