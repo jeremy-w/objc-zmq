@@ -174,7 +174,7 @@ static inline void ZMQLogError(id object, NSString *msg);
                    flags:(ZMQMessageReceiveFlags)flags
 {
 	int recvCnt = zmq_recv(self.socket, buffer, length, flags);
-	if (recvCnt < 0 || recvCnt > length) {
+	if (recvCnt < 0) {
 		ZMQLogError(self, @"zmq_recv");
 	}
 
