@@ -39,8 +39,8 @@ typedef int ZMQMessageReceiveFlags;
 - (NSData *)receiveDataWithFlags:(ZMQMessageReceiveFlags)flags;
 
 - (int)receiveWithBuffer:(void *)buffer
-         withBufferLength:(NSInteger)length
-                withFlags:(ZMQMessageReceiveFlags)flags;
+                  length:(size_t)length
+                   flags:(ZMQMessageReceiveFlags)flags;
 
 #pragma mark Polling
 - (void)getPollItem:(zmq_pollitem_t *)outItem forEvents:(short)events;

@@ -170,8 +170,8 @@ static inline void ZMQLogError(id object, NSString *msg);
 }
 
 - (int)receiveWithBuffer:(void *)buffer
-        withBufferLength:(NSInteger)length
-               withFlags:(ZMQMessageReceiveFlags)flags
+                  length:(size_t)length
+                   flags:(ZMQMessageReceiveFlags)flags
 {
 	int recvCnt = zmq_recv(self.socket, buffer, length, flags);
 	if (recvCnt < 0 || recvCnt > length) {
