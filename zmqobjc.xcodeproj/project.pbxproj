@@ -19,10 +19,6 @@
 		3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62E0A111DEFB4B008EA78B /* libzmq.dylib */; };
 		3FFFDB8012F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
 		3FFFDB8112F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
-		420018DB186E2E8800FE3DB1 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
-		421511FB186E0DF100D5811A /* libzmq.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F6186E0DF100D5811A /* libzmq.3.dylib */; };
-		421511FD186E0DF100D5811A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
-		421511FF186E0DF100D5811A /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F8186E0DF100D5811A /* libzmq.dylib */; };
 		42151211186E100F00D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
 		42151214186E100F00D5811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42151213186E100F00D5811A /* main.m */; };
 		4215121C186E107000D5811A /* libzmqobjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62DF4F11DED50C008EA78B /* libzmqobjc.a */; };
@@ -39,7 +35,6 @@
 		4215124C186E1BA100D5811A /* ZMQException.h in Headers */ = {isa = PBXBuildFile; fileRef = 42151249186E1BA100D5811A /* ZMQException.h */; };
 		4215124D186E1BA100D5811A /* ZMQException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215124A186E1BA100D5811A /* ZMQException.m */; };
 		4215124E186E1BA100D5811A /* ZMQException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215124A186E1BA100D5811A /* ZMQException.m */; };
-		4215124F186E1FED00D5811A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
 		42151255186E284600D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
 		42151258186E284600D5811A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42151257186E284600D5811A /* main.cpp */; };
 		42151260186E289A00D5811A /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4215121F186E109700D5811A /* libstdc++.dylib */; };
@@ -120,9 +115,6 @@
 		3F62E09D11DEFB28008EA78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F62E0A111DEFB4B008EA78B /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzmq.dylib; path = /usr/local/lib/libzmq.dylib; sourceTree = "<absolute>"; };
 		3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQObjC.h; sourceTree = "<group>"; };
-		421511F6186E0DF100D5811A /* libzmq.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.3.dylib; sourceTree = "<group>"; };
-		421511F7186E0DF100D5811A /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
-		421511F8186E0DF100D5811A /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.dylib; sourceTree = "<group>"; };
 		42151201186E0E4B00D5811A /* zmq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
 		42151202186E0E4B00D5811A /* zmq_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zmq_utils.h; sourceTree = "<group>"; };
 		4215120E186E100F00D5811A /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +129,9 @@
 		4215124A186E1BA100D5811A /* ZMQException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMQException.m; sourceTree = "<group>"; };
 		42151254186E284600D5811A /* CPP_HelloWorldClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPP_HelloWorldClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		42151257186E284600D5811A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4250A411186E36CD00161D20 /* libzmq.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.3.dylib; sourceTree = "<group>"; };
+		4250A412186E36CD00161D20 /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.dylib; sourceTree = "<group>"; };
+		4250A414186E36CD00161D20 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
 		D2AAC0630554660B00DB518D /* libzmqobjc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzmqobjc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4215124F186E1FED00D5811A /* libzmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +179,6 @@
 			files = (
 				42151260186E289A00D5811A /* libstdc++.dylib in Frameworks */,
 				42151255186E284600D5811A /* Foundation.framework in Frameworks */,
-				420018DB186E2E8800FE3DB1 /* libzmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,11 +186,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421511FB186E0DF100D5811A /* libzmq.3.dylib in Frameworks */,
 				3F62E09E11DEFB28008EA78B /* Foundation.framework in Frameworks */,
-				421511FD186E0DF100D5811A /* libzmq.a in Frameworks */,
 				3F62E0A211DEFB4B008EA78B /* libzmq.dylib in Frameworks */,
-				421511FF186E0DF100D5811A /* libzmq.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +250,9 @@
 		421511F5186E0DF100D5811A /* zeromq-4.0.3 */ = {
 			isa = PBXGroup;
 			children = (
+				4250A410186E36CD00161D20 /* dynamic_library */,
 				42151200186E0E4B00D5811A /* include */,
-				421511F6186E0DF100D5811A /* libzmq.3.dylib */,
-				421511F7186E0DF100D5811A /* libzmq.a */,
-				421511F8186E0DF100D5811A /* libzmq.dylib */,
+				4250A413186E36CD00161D20 /* static_library */,
 			);
 			path = "zeromq-4.0.3";
 			sourceTree = "<group>";
@@ -327,6 +316,23 @@
 				42151257186E284600D5811A /* main.cpp */,
 			);
 			path = CPP_HelloWorldClient;
+			sourceTree = "<group>";
+		};
+		4250A410186E36CD00161D20 /* dynamic_library */ = {
+			isa = PBXGroup;
+			children = (
+				4250A411186E36CD00161D20 /* libzmq.3.dylib */,
+				4250A412186E36CD00161D20 /* libzmq.dylib */,
+			);
+			path = dynamic_library;
+			sourceTree = "<group>";
+		};
+		4250A413186E36CD00161D20 /* static_library */ = {
+			isa = PBXGroup;
+			children = (
+				4250A414186E36CD00161D20 /* libzmq.a */,
+			);
+			path = static_library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,9 +653,9 @@
 					/opt/local/include,
 				);
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/zeromq-4.0.3",
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
 				);
 				PRODUCT_NAME = zmqobjc;
 			};
@@ -671,9 +677,9 @@
 					/opt/local/include,
 				);
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/zeromq-4.0.3",
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
 				);
 				PRODUCT_NAME = zmqobjc;
 				ZERO_LINK = NO;
@@ -929,11 +935,7 @@
 					/opt/local/include,
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
-				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/zeromq-4.0.3",
-					"$(inherited)",
-					"/Users/neoneye/git/opcoders_objc-zmq/zeromq-4.0.3",
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/zeromq-4.0.3";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -941,6 +943,10 @@
 					"-Wabi",
 					"-Wctor-dtor-privacy",
 					"-Wsign-promo",
+				);
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -980,17 +986,17 @@
 					/opt/local/include,
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
-				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/zeromq-4.0.3",
-					"$(inherited)",
-					"/Users/neoneye/git/opcoders_objc-zmq/zeromq-4.0.3",
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/zeromq-4.0.3";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(SHARED_C_CPP_FLAGS)",
 					"-Wabi",
 					"-Wctor-dtor-privacy",
 					"-Wsign-promo",
+				);
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
