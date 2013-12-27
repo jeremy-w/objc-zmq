@@ -17,11 +17,11 @@ int test() {
     
     ZMQContext *ctx = [[ZMQContext alloc] initWithIOThreads:1];
     
-    NSString *endpoint = @"tcp://127.0.0.1:5555";
+    NSString *endpoint = @"tcp://localhost:5555";
     ZMQSocket *requester = [ctx socketWithType:ZMQ_REQ];
-    BOOL didBind = [requester bindToEndpoint:endpoint];
-    if (!didBind) {
-		NSLog(@"*** Failed to bind to endpoint [%@].", endpoint);
+    BOOL didConnect = [requester connectToEndpoint:endpoint];
+    if (!didConnect) {
+		NSLog(@"*** Failed to connect to endpoint [%@].", endpoint);
 		return EXIT_FAILURE;
     }
 	
