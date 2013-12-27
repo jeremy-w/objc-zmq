@@ -38,6 +38,9 @@
 		42151255186E284600D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
 		42151258186E284600D5811A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42151257186E284600D5811A /* main.cpp */; };
 		42151260186E289A00D5811A /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4215121F186E109700D5811A /* libstdc++.dylib */; };
+		4250A41C186E3AF700161D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		4250A41F186E3AF700161D20 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4250A41E186E3AF700161D20 /* main.c */; };
+		4250A427186E3B4600161D20 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4215121F186E109700D5811A /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,15 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		42151252186E284600D5811A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +126,8 @@
 		4250A411186E36CD00161D20 /* libzmq.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.3.dylib; sourceTree = "<group>"; };
 		4250A412186E36CD00161D20 /* libzmq.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzmq.dylib; sourceTree = "<group>"; };
 		4250A414186E36CD00161D20 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
+		4250A41B186E3AF600161D20 /* C_HelloWorldServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C_HelloWorldServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		4250A41E186E3AF700161D20 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D2AAC0630554660B00DB518D /* libzmqobjc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzmqobjc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +175,15 @@
 			files = (
 				42151260186E289A00D5811A /* libstdc++.dylib in Frameworks */,
 				42151255186E284600D5811A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4250A418186E3AF600161D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4250A427186E3B4600161D20 /* libstdc++.dylib in Frameworks */,
+				4250A41C186E3AF700161D20 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +239,7 @@
 				42151225186E117E00D5811A /* SimpleServer */,
 				42151239186E11FC00D5811A /* SimpleClient */,
 				42151254186E284600D5811A /* CPP_HelloWorldClient */,
+				4250A41B186E3AF600161D20 /* C_HelloWorldServer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 		42151203186E0FCC00D5811A /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				4250A41D186E3AF700161D20 /* C_HelloWorldServer */,
 				42151256186E284600D5811A /* CPP_HelloWorldClient */,
 				42151212186E100F00D5811A /* HelloWorld */,
 				42151227186E117F00D5811A /* SimpleServer */,
@@ -333,6 +340,14 @@
 				4250A414186E36CD00161D20 /* libzmq.a */,
 			);
 			path = static_library;
+			sourceTree = "<group>";
+		};
+		4250A41D186E3AF700161D20 /* C_HelloWorldServer */ = {
+			isa = PBXGroup;
+			children = (
+				4250A41E186E3AF700161D20 /* main.c */,
+			);
+			path = C_HelloWorldServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +455,6 @@
 			buildPhases = (
 				42151250186E284600D5811A /* Sources */,
 				42151251186E284600D5811A /* Frameworks */,
-				42151252186E284600D5811A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -449,6 +463,22 @@
 			name = CPP_HelloWorldClient;
 			productName = CPP_HelloWorldClient;
 			productReference = 42151254186E284600D5811A /* CPP_HelloWorldClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		4250A41A186E3AF600161D20 /* C_HelloWorldServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4250A426186E3AF700161D20 /* Build configuration list for PBXNativeTarget "C_HelloWorldServer" */;
+			buildPhases = (
+				4250A417186E3AF600161D20 /* Sources */,
+				4250A418186E3AF600161D20 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = C_HelloWorldServer;
+			productName = C_HelloWorldServer;
+			productReference = 4250A41B186E3AF600161D20 /* C_HelloWorldServer */;
 			productType = "com.apple.product-type.tool";
 		};
 		D2AAC0620554660B00DB518D /* zmqobjc (dynamic) */ = {
@@ -495,6 +525,7 @@
 				42151224186E117E00D5811A /* SimpleServer */,
 				42151238186E11FC00D5811A /* SimpleClient */,
 				42151253186E284600D5811A /* CPP_HelloWorldClient */,
+				4250A41A186E3AF600161D20 /* C_HelloWorldServer */,
 			);
 		};
 /* End PBXProject section */
@@ -539,6 +570,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				42151258186E284600D5811A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4250A417186E3AF600161D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4250A41F186E3AF700161D20 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1041,98 @@
 			};
 			name = Release;
 		};
+		4250A424186E3AF700161D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"~/include",
+					/usr/local/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/zeromq-4.0.3";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4250A425186E3AF700161D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"~/include",
+					/usr/local/include,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/zeromq-4.0.3";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-L$(SRCROOT)/zeromq-4.0.3/static_library",
+					"-lzmq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1067,6 +1198,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4250A426186E3AF700161D20 /* Build configuration list for PBXNativeTarget "C_HelloWorldServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4250A424186E3AF700161D20 /* Debug */,
+				4250A425186E3AF700161D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
