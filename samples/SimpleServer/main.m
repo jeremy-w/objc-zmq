@@ -2,6 +2,10 @@
 //  main.m
 //  SimpleServer
 //
+//  Derived from:
+//  Hello World server in C++
+//  http://zguide.zeromq.org/cpp:hwserver
+//
 //  Created by Simon Strandgaard on 10/26/12.
 //  Copyright (c) 2012 Simon Strandgaard. All rights reserved.
 //

@@ -2,6 +2,10 @@
 //  main.m
 //  SimpleClient
 //
+//  Derived from:
+//  Hello World client in C++
+//  http://zguide.zeromq.org/cpp:hwclient
+//
 //  Created by Simon Strandgaard on 10/26/12.
 //  Copyright (c) 2012 Simon Strandgaard. All rights reserved.
 //
