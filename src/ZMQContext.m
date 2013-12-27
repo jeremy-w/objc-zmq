@@ -4,10 +4,16 @@
 - (id)initWithContext:(ZMQContext *)context type:(ZMQSocketType)type;
 @end
 
-@interface ZMQContext ()
-@property(readonly) void *context;
+@interface ZMQContext () {
+	OSSpinLock socketsLock;
+}
+
+@property(atomic, assign) void *context;
 @property(readwrite, getter=isTerminated, NS_NONATOMIC_IPHONEONLY)
 	BOOL terminated;
+
+@property(atomic, strong) NSMutableSet *sockets;
+
 @end
 
 @implementation ZMQContext
@@ -26,31 +32,26 @@
 	self = [super init];
 	if (!self) return nil;
 
-	context = zmq_init(threadCount);
-	if (!context) {
+	self.context = zmq_init(threadCount);
+	if (!self.context) {
 		NSLog(@"%s: *** Error creating ZMQContext: zmq_init: %s",
 		      __func__, zmq_strerror(zmq_errno()));
-		[self release];
-		return nil;
+        @throw [[ZMQException alloc] initWithCode:[[NSString alloc]
+                                                   initWithUTF8String:zmq_strerror(zmq_errno())] 
+                                             code:zmq_errno()];
 	}
 
 	socketsLock = OS_SPINLOCK_INIT;
-	sockets = [[NSMutableArray alloc] init];
+	self.sockets = [NSMutableSet new];
 	return self;
 }
 
-@synthesize context;
 - (void)dealloc {
 	[self terminate];
-	context = NULL;
-	[sockets release], sockets = nil;
-	[super dealloc];
 }
 
-@synthesize sockets;
 - (ZMQSocket *)socketWithType:(ZMQSocketType)type {
-	ZMQSocket *
-	socket = [[[ZMQSocket alloc] initWithContext:self type:type] autorelease];
+	ZMQSocket *	socket = [[ZMQSocket alloc] initWithContext:self type:type];
 	if (socket) {
 		OSSpinLockLock(&socketsLock); {
 			[(NSMutableArray *)self.sockets addObject:socket];
@@ -65,9 +66,9 @@
 	}
 }
 
-@synthesize terminated;
 - (void)terminate {
 	(void)zmq_term(self.context);
+	self.context = NULL;
 	self.terminated = YES;
 }
 @end

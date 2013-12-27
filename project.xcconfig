@@ -1,13 +1,14 @@
 // Project-level build settings - all configurations
-SDKROOT = macosx10.6
-MACOSX_DEPLOYMENT_TARGET = 10.5
+SDKROOT = macosx
 
-ARCHS = i386 x86_64 ppc
-ARCHS[sdk=macosx10.6*] = i386 x86_64 ppc
-ARCHS[sdk=macosx10.5*] = i386 x86_64 ppc ppc64
-ARCHS[sdk=macosx10.4*] = i386 ppc
+//ARCHS = i386 x86_64 ppc
+//ARCHS[sdk=macosx10.6*] = i386 x86_64 ppc
+//ARCHS[sdk=macosx10.5*] = i386 x86_64 ppc ppc64
+//ARCHS[sdk=macosx10.4*] = i386 ppc
 
-MACOSX_DEPLOYMENT_TARGET = 10.6
+ARCHS = $(ARCHS_STANDARD_64_BIT)
+CLANG_ENABLE_OBJC_ARC = YES
+MACOSX_DEPLOYMENT_TARGET = 10.7
 ONLY_ACTIVE_ARCH = NO
 
 GCC_TREAT_WARNINGS_AS_ERRORS = YES

@@ -20,7 +20,6 @@
 		3FFFDB8012F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
 		3FFFDB8112F121D200E2D54F /* ZMQObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */; };
 		421511FB186E0DF100D5811A /* libzmq.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F6186E0DF100D5811A /* libzmq.3.dylib */; };
-		421511FC186E0DF100D5811A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
 		421511FD186E0DF100D5811A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
 		421511FF186E0DF100D5811A /* libzmq.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F8186E0DF100D5811A /* libzmq.dylib */; };
 		42151211186E100F00D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
@@ -35,6 +34,11 @@
 		4215123D186E11FC00D5811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215123C186E11FC00D5811A /* main.m */; };
 		42151247186E123500D5811A /* libzmqobjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62DF4F11DED50C008EA78B /* libzmqobjc.a */; };
 		42151248186E123D00D5811A /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4215121F186E109700D5811A /* libstdc++.dylib */; };
+		4215124B186E1BA100D5811A /* ZMQException.h in Headers */ = {isa = PBXBuildFile; fileRef = 42151249186E1BA100D5811A /* ZMQException.h */; };
+		4215124C186E1BA100D5811A /* ZMQException.h in Headers */ = {isa = PBXBuildFile; fileRef = 42151249186E1BA100D5811A /* ZMQException.h */; };
+		4215124D186E1BA100D5811A /* ZMQException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215124A186E1BA100D5811A /* ZMQException.m */; };
+		4215124E186E1BA100D5811A /* ZMQException.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215124A186E1BA100D5811A /* ZMQException.m */; };
+		4215124F186E1FED00D5811A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421511F7186E0DF100D5811A /* libzmq.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,8 @@
 		42151228186E117F00D5811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42151239186E11FC00D5811A /* SimpleClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		4215123C186E11FC00D5811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42151249186E1BA100D5811A /* ZMQException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMQException.h; sourceTree = "<group>"; };
+		4215124A186E1BA100D5811A /* ZMQException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMQException.m; sourceTree = "<group>"; };
 		D2AAC0630554660B00DB518D /* libzmqobjc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzmqobjc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421511FC186E0DF100D5811A /* libzmq.a in Frameworks */,
+				4215124F186E1FED00D5811A /* libzmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,8 @@
 				3FFFDB7F12F121D200E2D54F /* ZMQObjC.h */,
 				3F62DF6411DED7A4008EA78B /* ZMQContext.h */,
 				3F62DF6511DED7A4008EA78B /* ZMQContext.m */,
+				42151249186E1BA100D5811A /* ZMQException.h */,
+				4215124A186E1BA100D5811A /* ZMQException.m */,
 				3F62DF7A11DEDAAA008EA78B /* ZMQSocket.h */,
 				3F62DF7B11DEDAAA008EA78B /* ZMQSocket.m */,
 			);
@@ -296,6 +304,7 @@
 				3F62DF6811DED7A4008EA78B /* ZMQContext.h in Headers */,
 				3F62DF7E11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
 				3FFFDB8012F121D200E2D54F /* ZMQObjC.h in Headers */,
+				4215124B186E1BA100D5811A /* ZMQException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +315,7 @@
 				3F62DF6611DED7A4008EA78B /* ZMQContext.h in Headers */,
 				3F62DF7C11DEDAAA008EA78B /* ZMQSocket.h in Headers */,
 				3FFFDB8112F121D200E2D54F /* ZMQObjC.h in Headers */,
+				4215124C186E1BA100D5811A /* ZMQException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +447,7 @@
 			files = (
 				3F62DF6911DED7A4008EA78B /* ZMQContext.m in Sources */,
 				3F62DF7F11DEDAAA008EA78B /* ZMQSocket.m in Sources */,
+				4215124D186E1BA100D5811A /* ZMQException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +481,7 @@
 			files = (
 				3F62DF6711DED7A4008EA78B /* ZMQContext.m in Sources */,
 				3F62DF7D11DEDAAA008EA78B /* ZMQSocket.m in Sources */,
+				4215124E186E1BA100D5811A /* ZMQException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,10 +518,6 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/neoneye/Downloads/objc-zmq/zeromq",
-				);
 				PRODUCT_NAME = zmqobjc;
 			};
 			name = Debug;
@@ -523,10 +531,6 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/neoneye/Downloads/objc-zmq/zeromq",
-				);
 				PRODUCT_NAME = zmqobjc;
 			};
 			name = Release;
@@ -557,10 +561,16 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Foundation.framework/Headers/Foundation.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"~/include",
+					/usr/local/include,
+					/opt/local/include,
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/neoneye/Downloads/objc-zmq/zeromq",
+					"/Users/neoneye/git/opcoders_objc-zmq/zeromq-4.0.3",
 				);
 				PRODUCT_NAME = zmqobjc;
 			};
@@ -575,10 +585,16 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Foundation.framework/Headers/Foundation.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"~/include",
+					/usr/local/include,
+					/opt/local/include,
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/neoneye/Downloads/objc-zmq/zeromq",
+					"/Users/neoneye/git/opcoders_objc-zmq/zeromq-4.0.3",
 				);
 				PRODUCT_NAME = zmqobjc;
 				ZERO_LINK = NO;

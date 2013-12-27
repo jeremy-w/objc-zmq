@@ -1,17 +1,14 @@
 #import <Foundation/Foundation.h>
 #import "ZMQSocket.h"  // ZMQSocketType
+#import "ZMQException.h"
 #import <libkern/OSAtomic.h>
 
 /* Special polling timeout values. */
 #define ZMQPollTimeoutNever (-1)
 #define ZMQPollTimeoutNow   (0)
 
-@interface ZMQContext : NSObject {
-	void *context;
-	NSMutableArray *sockets;
-	OSSpinLock socketsLock;
-	BOOL terminated;
-}
+@interface ZMQContext : NSObject
+
 + (void)getZMQVersionMajor:(int *)major minor:(int *)minor patch:(int *)patch;
 
 /* Polling */
@@ -24,7 +21,7 @@
 
 - (ZMQSocket *)socketWithType:(ZMQSocketType)type;
 // Sockets associated with this context.
-@property(readonly, retain, NS_NONATOMIC_IPHONEONLY) NSArray *sockets;
+@property(atomic, strong, readonly) NSSet *sockets;
 
 // Closes all associated sockets.
 - (void)closeSockets;
