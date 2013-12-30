@@ -43,7 +43,7 @@ int test() {
 	}
 	
     
-    
+    [ctx closeSockets];
     [ctx terminate];
     return EXIT_SUCCESS;
 }
