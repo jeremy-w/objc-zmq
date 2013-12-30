@@ -1,0 +1,23 @@
+platform :osx, '10.9'
+
+xcodeproj "ZeroMQ"
+
+target "SimpleServer" do
+  pod "objc-zmq", :path => "../objc-zmq.podspec"
+end
+
+target "SimpleClient" do
+  pod "objc-zmq", :path => "../objc-zmq.podspec"
+end
+
+target "HelloWorld" do
+  pod "objc-zmq", :path => "../objc-zmq.podspec"
+end
+
+target "CPP_HelloWorldClient" do
+  pod "objc-zmq", :path => "../objc-zmq.podspec"
+end
+
+target "C_HelloWorldServer" do
+  pod "objc-zmq", :path => "../objc-zmq.podspec"
+end

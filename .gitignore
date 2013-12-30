@@ -1,33 +1,20 @@
-## The Google provides:
-## http://blog.illuminex.com/2009/10/better-sample-gitignore-file-for-xcode.html
-
-# Finder stuff
+# Xcode
 .DS_Store
-
-# Xcode per-user config
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
+*/build/*
 *.pbxuser
-*.xcworkspace
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
 
-# Generated files
-build/
-*.[oa]
-
-# Other source repository archive directories (protects when importing)
-.hg
-.svn
-CVS
-
-# automatic backup files
-*~.nib
-*.swp
-*~
-*(Autosaved).*
-Backup[ ]of[ ]*.pages/
-Backup[ ]of[ ]*.key/
-Backup[ ]of[ ]*.numbers/
+#CocoaPods
+Pods
