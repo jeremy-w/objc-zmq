@@ -1,0 +1,1109 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		42A2E9721871E0C30042E67F /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 42A2E9751871E0C30042E67F /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				42A2E97F1871E0E50042E67F /* PBXTargetDependency */,
+				42A2E97D1871E0E10042E67F /* PBXTargetDependency */,
+				42A2E97B1871E0DE0042E67F /* PBXTargetDependency */,
+				42A2E9791871E0DA0042E67F /* PBXTargetDependency */,
+				42A2E9771871E0D60042E67F /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = Demo;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		016F22B69FC54497B28BE70D /* libPods-C_HelloWorldServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F80BFF2A70403086B202B1 /* libPods-C_HelloWorldServer.a */; };
+		2AF399E3313D46B4BE9AD7EF /* libPods-SimpleServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 538E65E7F3EC4260BABAC63A /* libPods-SimpleServer.a */; };
+		42151211186E100F00D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		42151214186E100F00D5811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42151213186E100F00D5811A /* main.m */; };
+		42151226186E117E00D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		42151229186E117F00D5811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42151228186E117F00D5811A /* main.m */; };
+		4215123A186E11FC00D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		4215123D186E11FC00D5811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215123C186E11FC00D5811A /* main.m */; };
+		42151255186E284600D5811A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		42151258186E284600D5811A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42151257186E284600D5811A /* main.cpp */; };
+		4250A41C186E3AF700161D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42151210186E100F00D5811A /* Foundation.framework */; };
+		4250A41F186E3AF700161D20 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4250A41E186E3AF700161D20 /* main.c */; };
+		5CC6D17296BB40CA8DDEA357 /* libPods-SimpleClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D119053F2FCC42E6ABF0FB46 /* libPods-SimpleClient.a */; };
+		601CCB7655B24D7BBAC79A52 /* libPods-HelloWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 092392B1A6004B02806BC7EB /* libPods-HelloWorld.a */; };
+		6C120ED3E4B34A66B31D55D0 /* libPods-CPP_HelloWorldClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CC640532834D28A78A2E17 /* libPods-CPP_HelloWorldClient.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42A2E9761871E0D60042E67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4215120D186E100F00D5811A;
+			remoteInfo = HelloWorld;
+		};
+		42A2E9781871E0DA0042E67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42151224186E117E00D5811A;
+			remoteInfo = SimpleServer;
+		};
+		42A2E97A1871E0DE0042E67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42151238186E11FC00D5811A;
+			remoteInfo = SimpleClient;
+		};
+		42A2E97C1871E0E10042E67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42151253186E284600D5811A;
+			remoteInfo = CPP_HelloWorldClient;
+		};
+		42A2E97E1871E0E50042E67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4250A41A186E3AF600161D20;
+			remoteInfo = C_HelloWorldServer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4215120C186E100F00D5811A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		42151223186E117E00D5811A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		42151237186E11FC00D5811A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		092392B1A6004B02806BC7EB /* libPods-HelloWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		212E6A12DF8F46DEB1CEAC52 /* Pods-CPP_HelloWorldClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPP_HelloWorldClient.xcconfig"; path = "Pods/Pods-CPP_HelloWorldClient.xcconfig"; sourceTree = "<group>"; };
+		3F62E09D11DEFB28008EA78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4215120E186E100F00D5811A /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
+		42151210186E100F00D5811A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42151213186E100F00D5811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42151225186E117E00D5811A /* SimpleServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		42151228186E117F00D5811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42151239186E11FC00D5811A /* SimpleClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		4215123C186E11FC00D5811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42151254186E284600D5811A /* CPP_HelloWorldClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPP_HelloWorldClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		42151257186E284600D5811A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4250A41B186E3AF600161D20 /* C_HelloWorldServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C_HelloWorldServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		4250A41E186E3AF700161D20 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		538E65E7F3EC4260BABAC63A /* libPods-SimpleServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleServer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F80BFF2A70403086B202B1 /* libPods-C_HelloWorldServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-C_HelloWorldServer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A957AFF856416BA688AFC7 /* Pods-SimpleServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServer.xcconfig"; path = "Pods/Pods-SimpleServer.xcconfig"; sourceTree = "<group>"; };
+		9DA4B656DA9342E4A3D2C22A /* Pods-SimpleClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleClient.xcconfig"; path = "Pods/Pods-SimpleClient.xcconfig"; sourceTree = "<group>"; };
+		A84CECCD810E48DAACEA9EDB /* Pods-C_HelloWorldServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C_HelloWorldServer.xcconfig"; path = "Pods/Pods-C_HelloWorldServer.xcconfig"; sourceTree = "<group>"; };
+		C4CC640532834D28A78A2E17 /* libPods-CPP_HelloWorldClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CPP_HelloWorldClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D119053F2FCC42E6ABF0FB46 /* libPods-SimpleClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4343FF5F8CB49FCBC4B9B0D /* Pods-HelloWorld.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.xcconfig"; path = "Pods/Pods-HelloWorld.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4215120B186E100F00D5811A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151211186E100F00D5811A /* Foundation.framework in Frameworks */,
+				601CCB7655B24D7BBAC79A52 /* libPods-HelloWorld.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151222186E117E00D5811A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151226186E117E00D5811A /* Foundation.framework in Frameworks */,
+				2AF399E3313D46B4BE9AD7EF /* libPods-SimpleServer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151236186E11FC00D5811A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4215123A186E11FC00D5811A /* Foundation.framework in Frameworks */,
+				5CC6D17296BB40CA8DDEA357 /* libPods-SimpleClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151251186E284600D5811A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151255186E284600D5811A /* Foundation.framework in Frameworks */,
+				6C120ED3E4B34A66B31D55D0 /* libPods-CPP_HelloWorldClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4250A418186E3AF600161D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4250A41C186E3AF700161D20 /* Foundation.framework in Frameworks */,
+				016F22B69FC54497B28BE70D /* libPods-C_HelloWorldServer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* zmqobjc */ = {
+			isa = PBXGroup;
+			children = (
+				42151203186E0FCC00D5811A /* samples */,
+				4215120F186E100F00D5811A /* Frameworks */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				3F62E0A711DF04D5008EA78B /* Linked Libraries */,
+				85A957AFF856416BA688AFC7 /* Pods-SimpleServer.xcconfig */,
+				9DA4B656DA9342E4A3D2C22A /* Pods-SimpleClient.xcconfig */,
+				212E6A12DF8F46DEB1CEAC52 /* Pods-CPP_HelloWorldClient.xcconfig */,
+				A84CECCD810E48DAACEA9EDB /* Pods-C_HelloWorldServer.xcconfig */,
+				E4343FF5F8CB49FCBC4B9B0D /* Pods-HelloWorld.xcconfig */,
+			);
+			name = zmqobjc;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4215120E186E100F00D5811A /* HelloWorld */,
+				42151225186E117E00D5811A /* SimpleServer */,
+				42151239186E11FC00D5811A /* SimpleClient */,
+				42151254186E284600D5811A /* CPP_HelloWorldClient */,
+				4250A41B186E3AF600161D20 /* C_HelloWorldServer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F62E0A711DF04D5008EA78B /* Linked Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3F62E09D11DEFB28008EA78B /* Foundation.framework */,
+			);
+			name = "Linked Libraries";
+			sourceTree = "<group>";
+		};
+		42151203186E0FCC00D5811A /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				4250A41D186E3AF700161D20 /* C_HelloWorldServer */,
+				42151256186E284600D5811A /* CPP_HelloWorldClient */,
+				42151212186E100F00D5811A /* HelloWorld */,
+				42151227186E117F00D5811A /* SimpleServer */,
+				4215123B186E11FC00D5811A /* SimpleClient */,
+			);
+			path = samples;
+			sourceTree = "<group>";
+		};
+		4215120F186E100F00D5811A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42151210186E100F00D5811A /* Foundation.framework */,
+				538E65E7F3EC4260BABAC63A /* libPods-SimpleServer.a */,
+				D119053F2FCC42E6ABF0FB46 /* libPods-SimpleClient.a */,
+				C4CC640532834D28A78A2E17 /* libPods-CPP_HelloWorldClient.a */,
+				72F80BFF2A70403086B202B1 /* libPods-C_HelloWorldServer.a */,
+				092392B1A6004B02806BC7EB /* libPods-HelloWorld.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42151212186E100F00D5811A /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				42151213186E100F00D5811A /* main.m */,
+			);
+			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		42151227186E117F00D5811A /* SimpleServer */ = {
+			isa = PBXGroup;
+			children = (
+				42151228186E117F00D5811A /* main.m */,
+			);
+			path = SimpleServer;
+			sourceTree = "<group>";
+		};
+		4215123B186E11FC00D5811A /* SimpleClient */ = {
+			isa = PBXGroup;
+			children = (
+				4215123C186E11FC00D5811A /* main.m */,
+			);
+			path = SimpleClient;
+			sourceTree = "<group>";
+		};
+		42151256186E284600D5811A /* CPP_HelloWorldClient */ = {
+			isa = PBXGroup;
+			children = (
+				42151257186E284600D5811A /* main.cpp */,
+			);
+			path = CPP_HelloWorldClient;
+			sourceTree = "<group>";
+		};
+		4250A41D186E3AF700161D20 /* C_HelloWorldServer */ = {
+			isa = PBXGroup;
+			children = (
+				4250A41E186E3AF700161D20 /* main.c */,
+			);
+			path = C_HelloWorldServer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4215120D186E100F00D5811A /* HelloWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42151219186E100F00D5811A /* Build configuration list for PBXNativeTarget "HelloWorld" */;
+			buildPhases = (
+				BD4C5F5F12764222B8817E4F /* Check Pods Manifest.lock */,
+				4215120A186E100F00D5811A /* Sources */,
+				4215120B186E100F00D5811A /* Frameworks */,
+				4215120C186E100F00D5811A /* CopyFiles */,
+				9248357ECF7B42BCB20CACC9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloWorld;
+			productName = HelloWorld;
+			productReference = 4215120E186E100F00D5811A /* HelloWorld */;
+			productType = "com.apple.product-type.tool";
+		};
+		42151224186E117E00D5811A /* SimpleServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4215122E186E117F00D5811A /* Build configuration list for PBXNativeTarget "SimpleServer" */;
+			buildPhases = (
+				72BA1061B31A4F44A0741F90 /* Check Pods Manifest.lock */,
+				42151221186E117E00D5811A /* Sources */,
+				42151222186E117E00D5811A /* Frameworks */,
+				42151223186E117E00D5811A /* CopyFiles */,
+				7BA22C1B70F64B758F27CFC6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleServer;
+			productName = SimpleServer;
+			productReference = 42151225186E117E00D5811A /* SimpleServer */;
+			productType = "com.apple.product-type.tool";
+		};
+		42151238186E11FC00D5811A /* SimpleClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42151242186E11FC00D5811A /* Build configuration list for PBXNativeTarget "SimpleClient" */;
+			buildPhases = (
+				999728A9E69B4CD085852909 /* Check Pods Manifest.lock */,
+				42151235186E11FC00D5811A /* Sources */,
+				42151236186E11FC00D5811A /* Frameworks */,
+				42151237186E11FC00D5811A /* CopyFiles */,
+				0BA22BA6B7484E1EB9D12FB2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleClient;
+			productName = SimpleClient;
+			productReference = 42151239186E11FC00D5811A /* SimpleClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		42151253186E284600D5811A /* CPP_HelloWorldClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4215125D186E284600D5811A /* Build configuration list for PBXNativeTarget "CPP_HelloWorldClient" */;
+			buildPhases = (
+				D3AD67B3E5974052B53773F6 /* Check Pods Manifest.lock */,
+				42151250186E284600D5811A /* Sources */,
+				42151251186E284600D5811A /* Frameworks */,
+				12E3500C5BEA498A9A1F4F2B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CPP_HelloWorldClient;
+			productName = CPP_HelloWorldClient;
+			productReference = 42151254186E284600D5811A /* CPP_HelloWorldClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		4250A41A186E3AF600161D20 /* C_HelloWorldServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4250A426186E3AF700161D20 /* Build configuration list for PBXNativeTarget "C_HelloWorldServer" */;
+			buildPhases = (
+				D961BA58096F4AFBBEC45811 /* Check Pods Manifest.lock */,
+				4250A417186E3AF600161D20 /* Sources */,
+				4250A418186E3AF600161D20 /* Frameworks */,
+				6D5A0BFC06D14A86B387F6E3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = C_HelloWorldServer;
+			productName = C_HelloWorldServer;
+			productReference = 4250A41B186E3AF600161D20 /* C_HelloWorldServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "ZeroMQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* zmqobjc */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42A2E9721871E0C30042E67F /* All */,
+				42151224186E117E00D5811A /* SimpleServer */,
+				42151238186E11FC00D5811A /* SimpleClient */,
+				4215120D186E100F00D5811A /* HelloWorld */,
+				42151253186E284600D5811A /* CPP_HelloWorldClient */,
+				4250A41A186E3AF600161D20 /* C_HelloWorldServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BA22BA6B7484E1EB9D12FB2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SimpleClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12E3500C5BEA498A9A1F4F2B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CPP_HelloWorldClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D5A0BFC06D14A86B387F6E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-C_HelloWorldServer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72BA1061B31A4F44A0741F90 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BA22C1B70F64B758F27CFC6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SimpleServer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9248357ECF7B42BCB20CACC9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-HelloWorld-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999728A9E69B4CD085852909 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4C5F5F12764222B8817E4F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AD67B3E5974052B53773F6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D961BA58096F4AFBBEC45811 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4215120A186E100F00D5811A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151214186E100F00D5811A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151221186E117E00D5811A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151229186E117F00D5811A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151235186E11FC00D5811A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4215123D186E11FC00D5811A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42151250186E284600D5811A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42151258186E284600D5811A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4250A417186E3AF600161D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4250A41F186E3AF700161D20 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42A2E9771871E0D60042E67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4215120D186E100F00D5811A /* HelloWorld */;
+			targetProxy = 42A2E9761871E0D60042E67F /* PBXContainerItemProxy */;
+		};
+		42A2E9791871E0DA0042E67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42151224186E117E00D5811A /* SimpleServer */;
+			targetProxy = 42A2E9781871E0DA0042E67F /* PBXContainerItemProxy */;
+		};
+		42A2E97B1871E0DE0042E67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42151238186E11FC00D5811A /* SimpleClient */;
+			targetProxy = 42A2E97A1871E0DE0042E67F /* PBXContainerItemProxy */;
+		};
+		42A2E97D1871E0E10042E67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42151253186E284600D5811A /* CPP_HelloWorldClient */;
+			targetProxy = 42A2E97C1871E0E10042E67F /* PBXContainerItemProxy */;
+		};
+		42A2E97F1871E0E50042E67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4250A41A186E3AF600161D20 /* C_HelloWorldServer */;
+			targetProxy = 42A2E97E1871E0E50042E67F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4215121A186E100F00D5811A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4343FF5F8CB49FCBC4B9B0D /* Pods-HelloWorld.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4215121B186E100F00D5811A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4343FF5F8CB49FCBC4B9B0D /* Pods-HelloWorld.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4215122F186E117F00D5811A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A957AFF856416BA688AFC7 /* Pods-SimpleServer.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42151230186E117F00D5811A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A957AFF856416BA688AFC7 /* Pods-SimpleServer.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		42151243186E11FC00D5811A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA4B656DA9342E4A3D2C22A /* Pods-SimpleClient.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42151244186E11FC00D5811A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA4B656DA9342E4A3D2C22A /* Pods-SimpleClient.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4215125E186E284600D5811A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212E6A12DF8F46DEB1CEAC52 /* Pods-CPP_HelloWorldClient.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(SHARED_C_CPP_FLAGS)",
+					"-Wabi",
+					"-Wctor-dtor-privacy",
+					"-Wsign-promo",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4215125F186E284600D5811A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212E6A12DF8F46DEB1CEAC52 /* Pods-CPP_HelloWorldClient.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(SHARED_C_CPP_FLAGS)",
+					"-Wabi",
+					"-Wctor-dtor-privacy",
+					"-Wsign-promo",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4250A424186E3AF700161D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A84CECCD810E48DAACEA9EDB /* Pods-C_HelloWorldServer.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4250A425186E3AF700161D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A84CECCD810E48DAACEA9EDB /* Pods-C_HelloWorldServer.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		42A2E9731871E0C30042E67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42A2E9741871E0C30042E67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "ZeroMQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42151219186E100F00D5811A /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4215121A186E100F00D5811A /* Debug */,
+				4215121B186E100F00D5811A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4215122E186E117F00D5811A /* Build configuration list for PBXNativeTarget "SimpleServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4215122F186E117F00D5811A /* Debug */,
+				42151230186E117F00D5811A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42151242186E11FC00D5811A /* Build configuration list for PBXNativeTarget "SimpleClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42151243186E11FC00D5811A /* Debug */,
+				42151244186E11FC00D5811A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4215125D186E284600D5811A /* Build configuration list for PBXNativeTarget "CPP_HelloWorldClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4215125E186E284600D5811A /* Debug */,
+				4215125F186E284600D5811A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4250A426186E3AF700161D20 /* Build configuration list for PBXNativeTarget "C_HelloWorldServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4250A424186E3AF700161D20 /* Debug */,
+				4250A425186E3AF700161D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A2E9751871E0C30042E67F /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A2E9731871E0C30042E67F /* Debug */,
+				42A2E9741871E0C30042E67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
