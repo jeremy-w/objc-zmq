@@ -7,11 +7,10 @@ Pod::Spec.new do |s|
     
     This is an Objective-C version of the reference ZeroMQ object-oriented C API. It follows the guidelines laid out by the official "Guidelines for ZeroMQ bindings".
     DESC
-  s.homepage     = "https://github.com/calvinchengx/objc-zmq"
-  s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage     = "https://github.com/jeremy-w/objc-zmq"
   s.license      = 'MIT'
   s.author       = { "Simon Strandgaard" => "simon@opcoders.com" }
-  s.source       = { :git => "https://github.com/calvinchengx/objc-zmq.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/jeremy-w/objc-zmq.git", :tag => s.version.to_s }
   s.platform     = :osx, '10.10'
   s.platform     = :ios, '7.0'
   s.osx.deployment_target = '10.10'
